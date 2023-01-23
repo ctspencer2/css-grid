@@ -89,10 +89,6 @@ img {
   font-size: 20px;
 }
 
-[aria-controls="menu-list"] {
-  display: none;
-}
-
 .feature {
   background: white;
   padding: 10px;
@@ -101,7 +97,7 @@ img {
   box-shadow: 0 0 4px rgba (0, 0, 0, 0.1);
 }
 
-.features{
+.features {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -151,6 +147,7 @@ img {
 
 .menu ul {
   max-height: 0;
+  overflow: hidden;
   transform: rotateX(90deg);
   transition: all 0.5s;
 }
@@ -165,9 +162,23 @@ img {
   transform: rotateX(0);
 }
 
+[aria-expanded="false"] .close {
+  display: none;
+}
+
+[aria-expanded="true"] .close {
+  display: inline-block;
+}
+
+[aria-expanded="true"] .open {
+  display: none;
+}
+
+
 @media (max-width: 1000px) {
   .menu {
     order: -1;
+    perspective: 800px;
   }
   [aria-controls="menu-list"] {
     display: block;
