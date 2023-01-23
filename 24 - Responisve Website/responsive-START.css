@@ -61,7 +61,7 @@ img {
 }
 
 .cta1 {
-  grid-area: 1;
+  grid-area: cta1;
 }
 
 .cta2 {
@@ -172,7 +172,6 @@ img {
   [aria-controls="menu-list"] {
     display: block;
     margin-bottom: 10px;
-    transform: rotate(0);
   }
 }
 
